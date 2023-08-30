@@ -1,0 +1,283 @@
+/* Zaid A.Yusuf/000903981 */
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: white;
+	max-width: 100%;
+	font-family: sans-serif;
+}
+
+header{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto;
+	grid-template-areas: "HeaderLeftSide HeaderMiddleSide HeaderRightSide";
+}
+
+header > .HeaderLeftSide{
+	justify-self: start;
+	align-self: center;
+	grid-area: HeaderLeftSide;
+	display: flex;
+}
+
+header > .HeaderLeftSide > a{
+	margin-left: 2em;
+	padding: 7.5px 1.5em 7.5px 1.5em;
+	background-color: #0172BA;
+	color: white;
+	border: none;
+	border-radius: 25px 25px 25px 25px;
+	text-decoration: none;
+}
+
+header > .HeaderLeftSide > a:hover{
+	background-color: #089247;
+}
+
+header > .HeaderMiddleSide{
+	justify-self: center;
+	align-self: center;
+	grid-area: HeaderMiddleSide;
+}
+
+header > .HeaderRightSide{
+	justify-self: end;
+	align-self: center;
+}
+
+.HeaderRightSide{
+	display: flex;
+}
+
+header > .HeaderRightSide > a > img{
+	margin-right: 0.5em;
+}
+
+nav{
+	position: sticky;
+	top: 1px;
+	background-color: #CEECFE;
+	padding: 1em;
+	border-top: 3px solid #0172BA;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom: 3px solid #0172BA;
+}
+
+nav > a{
+	padding: 8px 2em 8px 2em;
+	border-radius: 25px 25px 25px 25px;
+	background-color: white;
+	border: 3px solid #0172BA;
+	margin-right: 2em;
+	text-decoration: none;
+	color: #003557;
+}
+
+nav > a:hover{
+	background-color: #003557;
+	color: #0172BA;
+}
+
+main
+{
+	display: grid;
+	grid-template-columns: min-content auto minmax(200px, 20%);
+	grid-template-rows: auto;
+	gap: 2em;
+	grid-auto-flow: row;
+	grid-template-areas: "MainLeftSide MainMiddleSide MainRightSide";
+	padding: 2em 5% 2em 5%;
+}
+
+main > .MainLeftSide{
+	justify-self: center;
+	grid-area: MainLeftSide;
+}
+
+.MainLeftSide > img{
+	margin-bottom: 2em;
+}
+
+main > .MainMiddleSide{
+	justify-self: center;
+	grid-area: MainMiddleSide;
+}
+
+main > .MainRightSide{
+	justify-self: end;
+	grid-area: MainRightSide;
+}
+
+.TopList{
+	padding: 1em;
+}
+
+.TopContent{
+	padding: 1em;
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-template-rows: auto auto;
+	grid-auto-rows: auto;
+	grid-template-areas: "TrailsList TrailsList" "NationalParks ProvincialParks";
+	align-items: stretch;
+	border: 2px solid black;
+	background-color: #CEECFE;
+	padding: 1em;
+}
+
+.TrailsList{
+	justify-self: center;
+	grid-area: TrailsList;
+}
+
+.NationalParks{
+	grid-area: NationalParks;
+	border-right: 2px solid black;
+}
+
+.ProvincialParks{
+	justify-self: center;
+	grid-area: ProvincialParks;
+}
+
+.MainContent{
+	display: grid;
+	grid-template-columns: auto;
+	grid-template-rows: auto auto;
+	gap: 0px 1em;
+	grid-auto-flow: row;
+	justify-content: center;
+	grid-template-areas: "Summer" "Winter"
+}
+
+.Summer{
+	grid-area: Summer;
+	margin: 0.5em;
+}
+
+.Winter{
+	grid-area: Winter;
+	margin: 0.5em;
+}
+
+.Summer > img{
+	float: right;
+	display: flex;
+}
+
+.Winter > img{
+	float: left;
+	display: flex;
+}
+.Gallery{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
+	padding: 2em;
+}
+h2{
+	text-align: center;
+	background-color: #0172BA;
+	color: white;
+}
+
+.OutdoorIMGs > img{
+	border: 1px solid black;
+	
+}
+
+.MainRightSide{
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+	display: block;
+}
+
+.MainRightSide > p{
+	padding-bottom: 0.5em;
+	padding-top: 0.5em;
+}
+
+.CanoeList > h2{
+	background-color: #0172BA;
+}
+
+.CanoeList> ul{
+	padding-left: 2em;
+}
+
+.Credits{
+	border-top: 2px solid #0172BA;
+	border-bottom: 2px solid #0172BA;
+}
+
+.Credit > p{
+	text-align: left;
+}
+
+h3{
+	text-align: center;
+}
+
+footer{
+	display: grid;
+	grid-template-columns: min-content auto auto auto auto;
+	grid-template-rows: auto auto;
+	grid-auto-flow: row;
+	align-content: end;
+	grid-template-areas: "img List1 List2 List3 List4" "img List5 List6 List7 empty";
+	border-top: 3px solid #0172BA;
+	background-color: #CEECFE;
+	padding-bottom: 3em;
+	padding-top: 3em;
+	gap: 3em;
+}
+
+.f3{
+	border-bottom: 2px solid #0172BA;
+	text-align: start;
+	border-top:
+}
+
+.img{
+	align-self: start;
+	grid-area: img;
+}
+
+.List1{
+	grid-area: List1;
+}
+
+.List2{
+	grid-area: List2;
+}
+
+.List3{
+	grid-area: List3;
+}
+
+.List4{
+	grid-area: List4;
+}
+
+.List5{
+	grid-area: List5;
+}
+
+.List7{
+	grid-area: List6;
+}
+
+.List1{
+	grid-area: List7;
+}
+
